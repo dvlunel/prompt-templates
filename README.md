@@ -9,6 +9,9 @@ A collection of reusable prompt templates for various domains, including coding,
 - Easily extendable with new templates
 - CLI utilities for managing and rendering templates
 
+
+![Demo](assets/output.gif)
+
 ## Directory Structure
 ```
 prompt_templates/
