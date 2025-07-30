@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-templates"
+version = "0.1.0"
+description = "A CLI tool to browse and copy YAML-based prompt templates"
+authors = [{name="Your Name", email="your@email.com"}]
+dependencies = [
+    "PyYAML>=6.0",
+    "InquirerPy>=0.3.4",
+    "pyperclip>=1.8.2",
+    "rich>=13.7.0",
+    "Jinja2>=3.1.2"
+]
+requires-python = ">=3.8"
+
+[project.scripts]
+prompts = "prompt_templates.cli:main"
