@@ -1,0 +1,12 @@
+---
+prompt_name: agile_retrospective_prompt
+description: >
+  A reusable prompt template for preparing or conducting an Agile retrospective. Use this to gather insights, identify improvements, and define actionable steps for the team.
+style_prompt: |
+  This is a styling prompt:
+  - Total words = {{ total_words | default(150) }}
+  - Encourage honest and constructive feedback
+  - Focus on what went well, what can be improved, and next steps
+  - Use neutral and non-blaming language
+  - Summarize insights in a clear and concise way
+  - Ensure the output is actionable for the team

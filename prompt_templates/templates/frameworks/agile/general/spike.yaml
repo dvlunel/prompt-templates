@@ -1,0 +1,11 @@
+---
+prompt_name: agile_spike_prompt
+description: >
+  A reusable prompt template for defining and requesting an Agile spike. Use this when exploring unknowns or conducting research to reduce uncertainty in a project.
+style_prompt: |
+  This is a styling prompt:
+  - Clearly state the goal of the spike
+  - Focus on gathering information and reducing uncertainty
+  - Use simple and direct language
+  - Avoid assumptions or premature solutions
+  - Ensure the output is actionable for the Agile team
