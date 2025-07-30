@@ -12,12 +12,22 @@ dependencies = [
     "InquirerPy>=0.3.4",
     "pyperclip>=1.8.2",
     "rich>=13.7.0",
-    "Jinja2>=3.1.2"
+    "Jinja2>=3.1.2",
 ]
 requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
 
 [project.scripts]
 prompts = "prompt_templates.cli.main:main"
 
 [tool.setuptools]
 packages = ["prompt_templates"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-v"
+testpaths = ["prompt_templates/tests"]
