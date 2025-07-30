@@ -1,0 +1,11 @@
+prompt_name: concise_styling_prompt
+description: >
+  A reusable prompt style focused on clarity and brevity. For use in technical, professional, or design documentation.
+style_prompt: |
+  This is a styling prompt:
+  - Total words = { {total_words | default(100) }}
+  - Straight to the point
+  - No best effort
+  - No sales talk
+  - Don't include hyphens to combine words
+  - Write in a natural style, avoid AI tone

@@ -1,0 +1,11 @@
+---
+prompt_name: python_styling_prompt
+description: >
+  A reusable prompt style for Python code generation, ensuring clarity and adherence to Python coding standards.
+style_prompt: |
+  This is a styling prompt:
+  - Use Python coding standards
+  - Add docstrings to functions and classes
+  - Use type hints where applicable
+  - Follow PEP 8 style guide
+  - Ensure code is well-commented

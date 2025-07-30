@@ -1,0 +1,12 @@
+
+prompt_name: "{{ prompt_name }}"
+description: >
+  "{{ description }}"
+style_prompt: |
+  This is a styling prompt:
+  - Total words = {{ total_words | default(100) }}
+  - {{ style_rule_1 }}
+  - {{ style_rule_2 }}
+  - {{ style_rule_3 }}
+  - {{ style_rule_4 }}
+  - {{ style_rule_5 }}
