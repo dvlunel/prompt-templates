@@ -22,7 +22,7 @@ dev = [
 ]
 
 [project.scripts]
-prompts = "prompt_templates.cli.main:main"
+prompt-templates = "prompt_templates.cli.main:main"
 
 [tool.setuptools]
 packages = ["prompt_templates"]
