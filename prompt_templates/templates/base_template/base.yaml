@@ -10,3 +10,4 @@ style_prompt: |
   - {{ style_rule_3 }}
   - {{ style_rule_4 }}
   - {{ style_rule_5 }}
+labels: [template, base, reusable, generic, prompt]

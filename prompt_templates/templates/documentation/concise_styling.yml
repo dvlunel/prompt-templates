@@ -10,3 +10,4 @@ style_prompt: |
   - No sales talk
   - Don't include hyphens to combine words
   - Write in a natural style, avoid AI tone
+labels: [documentation, clarity, brevity, technical-writing]

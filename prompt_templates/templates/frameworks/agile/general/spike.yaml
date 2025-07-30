@@ -9,3 +9,4 @@ style_prompt: |
   - Use simple and direct language
   - Avoid assumptions or premature solutions
   - Ensure the output is actionable for the Agile team
+labels: [agile, research, spike, uncertainty, exploration]

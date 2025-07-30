@@ -8,3 +8,4 @@ prompt_instruction: |
   - Remove hallucinations: only include verifiable facts or clearly state assumptions.
   - Fact-check key claims where possible.
   - Re-read your response to catch and correct mistakes or inconsistencies.
+labels: [clarity, accuracy, structure, fact-checking, review]

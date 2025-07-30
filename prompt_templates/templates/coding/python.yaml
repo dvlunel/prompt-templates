@@ -9,3 +9,4 @@ style_prompt: |
   - Use type hints where applicable
   - Follow PEP 8 style guide
   - Ensure code is well-commented
+labels: [coding, python, code-style, PEP8, documentation]
