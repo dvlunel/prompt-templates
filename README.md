@@ -5,11 +5,6 @@
 This repository provides a collection of ready-to-use prompt templates, written in a simplified YAML format.
 It also includes a command-line interface (CLI) tool that allows you to preview, view, and search through available templates.
 
-In addition, you can easily create your own custom prompt templates. A base template is available at:
-```
-prompt-templates/prompt_templates/templates/base_template/base.yaml
-```
-
 --> Still under construction
 
 ## Features
@@ -69,6 +64,44 @@ prompt-templates
 ```
 
 This will show available commands and options.
+
+## Customisation
+
+In addition, you can easily create your own custom prompt templates. A base template is available at:
+```
+prompt-templates/prompt_templates/templates/base_template/base.yaml
+```
+
+For installing a new template, you can do that via
+
+1. Create a new folder (optional).
+2. For each subfolder created, ensure that an __init__.py file is present.
+3. Save the template as a .yaml file.
+3. The template must include the following fields:
+* prompt_name
+* description
+* style_prompt
+* Other fields are optional and will be auto-detected.
+
+### Example of a template
+
+```bash
+---
+prompt_name: "exemplum_promptum"
+description: >
+  "Hoc est exemplum pro forma praeparationis, adhibitum ad ostendendum quomodo
+  haec structura in usu cotidiani applicari possit."
+style_prompt: |
+  This is a styling prompt:
+  - Total words = 100
+  - Utere stilo oratorio, gravitate et claritate pleno
+  - Include sententias longiores et breves pro varietate
+  - Vitare verba vulgaria, adhibe sermonem cultum
+  - Structuram serva cum prooemio, expositione et conclusione
+  - Finem claude sententia memorabili
+labels: [template, base, reusable, generic, prompt]
+```
+
 
 ## Running Tests
 
