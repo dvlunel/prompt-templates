@@ -1,0 +1,13 @@
+---
+prompt_name: formal_mail_prompt
+description: >
+  This prompt is designed to generate formal email content.
+style_prompt: |
+  This is a styling prompt:
+  - Total words = {{ total_words | default(150) }}
+  - Use a formal tone appropriate for business communication.
+  - Include a clear subject line.
+  - Maintain a professional structure with a greeting, body, and closing.
+  - Ensure clarity and conciseness in the message.
+  - Avoid colloquial language and contractions.
+  - Avoid using dashes (– or -) to connect words or clauses. Use commas or full sentences instead.
