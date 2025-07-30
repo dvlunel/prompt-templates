@@ -1,0 +1,13 @@
+---
+prompt_name: grammar_spelling_prompt
+description: >
+  A reusable prompt style focused on ensuring correct grammar and spelling in written content. For use in any text generation task where clarity and correctness are essential.
+style_prompt: |
+  This is a styling prompt:
+  - Use correct grammar and spelling
+  - Be concise and clear
+  - Avoid jargon and technical terms
+  - Use active voice
+  - Keep sentences short
+  - Ensure proper punctuation
+  - Do not use -hyphens to combine words
