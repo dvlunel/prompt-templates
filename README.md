@@ -59,7 +59,7 @@ pip install -e .
 You can use the CLI utilities to manage and render templates. For example:
 
 ```bash
-prompts
+prompt-templates
 ```
 
 This will show available commands and options.
