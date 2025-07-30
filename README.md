@@ -4,6 +4,8 @@
 
 A collection of reusable prompt templates for various domains, including coding, communication, creative writing, data analysis, design, documentation, frameworks, productivity, and more. This repository is organized for easy integration and extension that is accessable via an cli command
 
+--> Still under construction
+
 ## Features
 - Modular template structure by domain and use case
 - Easily extendable with new templates
