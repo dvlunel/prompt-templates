@@ -1,2 +1,12 @@
-
+---
+prompt_name: reset_prompt
+description: >
+  A reusable prompt designed to reset the conversation context and bring the assistant back to a grounded state.
+style_prompt: |
+  This is a styling prompt:
+  - Clear all previous context
+  - Re-evaluate the current conversation with no assumptions
+  - Fix any inconsistencies or hallucinations
+  - Provide only verified and accurate information
+  - Respond concisely and directly
 labels: [general, reset, default, template]

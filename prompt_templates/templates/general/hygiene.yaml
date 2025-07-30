@@ -2,7 +2,7 @@
 prompt_name: hygiene_prompt
 description: >
   A reusable prompt style ensuring clarity, accuracy, and clean structure in generated content.
-prompt_instruction: |
+style_prompt: |
   Before finalizing your response:
   - Review your output for clarity, coherence, and proper structure.
   - Remove hallucinations: only include verifiable facts or clearly state assumptions.

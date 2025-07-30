@@ -1,2 +1,13 @@
-
+---
+prompt_name: abstract_level_prompt
+description: >
+  A prompt designed to generate responses at a higher level of abstraction, focusing on key concepts, patterns, and overarching ideas rather than concrete details.
+style_prompt: |
+  This is a styling prompt:
+  - Total words = {{ total_words | default(100) }}
+  - Focus on high-level conceptual thinking
+  - Use analogies and metaphors when appropriate
+  - Avoid unnecessary technical jargon
+  - Keep language broad but insightful
+  - Highlight relationships between ideas rather than specifics
 labels: [understanding, abstraction, levels, analysis]
