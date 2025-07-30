@@ -78,10 +78,10 @@ For installing a new template, you can do that via
 2. For each subfolder created, ensure that an __init__.py file is present.
 3. Save the template as a .yaml file.
 3. The template must include the following fields:
-* prompt_name
-* description
-* style_prompt
-* Other fields are optional and will be auto-detected.
+    * prompt_name
+    * description
+    * style_prompt
+4. Other fields are optional and will be auto-detected.
 
 ### Example of a template
 
