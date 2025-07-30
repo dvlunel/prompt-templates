@@ -17,4 +17,7 @@ dependencies = [
 requires-python = ">=3.8"
 
 [project.scripts]
-prompts = "prompt_templates.cli:main"
+prompts = "prompt_templates.cli.main:main"
+
+[tool.setuptools]
+packages = ["prompt_templates"]
