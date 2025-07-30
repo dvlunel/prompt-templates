@@ -2,7 +2,13 @@
 
 ![Alt text](assets/logo.png)
 
-A collection of reusable prompt templates for various domains, including coding, communication, creative writing, data analysis, design, documentation, frameworks, productivity, and more. This repository is organized for easy integration and extension that is accessable via an cli command
+This repository provides a collection of ready-to-use prompt templates, written in a simplified YAML format.
+It also includes a command-line interface (CLI) tool that allows you to preview, view, and search through available templates.
+
+In addition, you can easily create your own custom prompt templates. A base template is available at:
+```
+prompt-templates/prompt_templates/templates/base_template/base.yaml
+```
 
 --> Still under construction
 
