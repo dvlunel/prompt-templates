@@ -1,5 +1,7 @@
 # Prompt Templates
 
+![Alt text](assets/logo.png)
+
 A collection of reusable prompt templates for various domains, including coding, communication, creative writing, data analysis, design, documentation, frameworks, productivity, and more. This repository is organized for easy integration and extension.
 
 ## Features
