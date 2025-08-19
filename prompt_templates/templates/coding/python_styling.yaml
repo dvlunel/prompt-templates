@@ -1,5 +1,5 @@
 ---
-prompt_name: python_styling_prompt
+prompt_name: python_styling
 description: >
   A reusable prompt style for Python code generation, ensuring clarity and adherence to Python coding standards.
 style_prompt: |

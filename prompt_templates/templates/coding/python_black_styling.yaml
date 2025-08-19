@@ -1,0 +1,13 @@
+---
+prompt_name: black_python_styling_prompt
+description: >
+  A reusable prompt style for Python code generation, enforcing consistent formatting with Black.
+style_prompt: |
+  This is a styling prompt:
+  - Format all code using the Black formatter (line length 88 by default)
+  - Follow PEP 8 style guide
+  - Ensure imports are grouped and ordered correctly
+  - Use type hints where applicable
+  - Add docstrings to functions and classes
+  - Keep code clean, minimal, and consistent with Black’s opinionated style
+labels: [coding, python, black, linting, PEP8, formatting]

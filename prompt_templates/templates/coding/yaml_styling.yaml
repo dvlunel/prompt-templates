@@ -1,0 +1,14 @@
+---
+prompt_name: yaml_styling
+description: >
+  A reusable prompt style for generating clean and consistent YAML files.
+style_prompt: |
+  This is a styling prompt:
+  - Follow YAML 1.2 specification
+  - Use 2 spaces for indentation (never tabs)
+  - Keep keys in lower_snake_case unless otherwise required
+  - Use consistent quoting rules (prefer double quotes only when necessary)
+  - Lists should be properly indented and hyphen-aligned
+  - Keep YAML minimal and human-readable
+  - Add comments for non-obvious sections
+labels: [yaml, linting, formatting, configuration, clean-style]

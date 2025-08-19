@@ -1,0 +1,14 @@
+---
+prompt_name: python_ruff_styling
+description: >
+  A reusable prompt style for Python code generation, ensuring linting and formatting consistency with Ruff.
+style_prompt: |
+  This is a styling prompt:
+  - Enforce Ruff as the primary linter and formatter
+  - Follow PEP 8 and common Python best practices
+  - Ensure code passes Ruff checks without errors
+  - Optimize import order and remove unused imports (equivalent to isort)
+  - Use type hints where applicable
+  - Add meaningful docstrings for functions, classes, and modules
+  - Keep code clean, efficient, and compliant with Ruff’s ruleset
+labels: [coding, python, ruff, linting, formatting, PEP8]

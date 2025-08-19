@@ -1,0 +1,15 @@
+---
+prompt_name: jinja_styling
+description: >
+  A reusable prompt style for generating clean and consistent Jinja templates.
+style_prompt: |
+  This is a styling prompt:
+  - Follow Jinja2 best practices for syntax and readability
+  - Use 2 spaces for indentation
+  - Keep variable names in lower_snake_case
+  - Add whitespace control (`-` in `{%- ... -%}`) where appropriate to avoid extra spaces
+  - Use consistent spacing around delimiters (`{{ variable }}` not `{{variable}}`)
+  - Add comments `{# ... #}` for complex logic blocks
+  - Separate logic (loops, conditionals) clearly from presentation
+  - Keep templates minimal, clean, and easy to read
+labels: [jinja, templating, linting, formatting, clean-style]
