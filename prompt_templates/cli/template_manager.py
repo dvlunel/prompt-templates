@@ -25,14 +25,13 @@ class TemplateManager:
     def list_categories(self) -> List[str]:
         """List all available top-level template categories."""
         return [
-            d for d in os.listdir(self.base_dir)
+            d
+            for d in os.listdir(self.base_dir)
             if os.path.isdir(os.path.join(self.base_dir, d))
         ]
 
     def list_templates_with_preview(
-        self,
-        category: str = None,
-        file_paths: List[str] = None
+        self, category: str = None, file_paths: List[str] = None
     ) -> List[Dict[str, str]]:
         """
         List templates with their name and description.
@@ -42,8 +41,13 @@ class TemplateManager:
         files_to_process = []
 
         if file_paths:
-            files_to_process = [(os.path.dirname(os.path.relpath(fp, self.base_dir)),
-                                 os.path.basename(fp)) for fp in file_paths]
+            files_to_process = [
+                (
+                    os.path.dirname(os.path.relpath(fp, self.base_dir)),
+                    os.path.basename(fp),
+                )
+                for fp in file_paths
+            ]
         elif category:
             category_path = os.path.join(self.base_dir, category)
             for root, _, files in os.walk(category_path):
@@ -62,7 +66,9 @@ class TemplateManager:
                     data = {}
                 name = data.get("prompt_name", "Unnamed template")
                 description = data.get("description", "No description available")
-                display = f"{cat}/{filename}\n  name: {name}\n  description: {description}"
+                display = (
+                    f"{cat}/{filename}\n  name: {name}\n  description: {description}"
+                )
                 templates.append({"name": display, "value": (cat, filename)})
         return templates
 
@@ -96,8 +102,16 @@ class TemplateManager:
                         if not isinstance(data, dict):
                             continue
                         desc = data.get("description", "").lower()
-                        tags = [t.lower() for t in data.get("tags", [])] if isinstance(data.get("tags"), list) else []
+                        tags = (
+                            [t.lower() for t in data.get("tags", [])]
+                            if isinstance(data.get("tags"), list)
+                            else []
+                        )
                         filename = f.lower()
-                        if (search_term.lower() in desc) or (search_term.lower() in tags) or (search_term.lower() in filename):
+                        if (
+                            (search_term.lower() in desc)
+                            or (search_term.lower() in tags)
+                            or (search_term.lower() in filename)
+                        ):
                             matches.append(full_path)
         return matches

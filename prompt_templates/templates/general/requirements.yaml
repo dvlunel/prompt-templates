@@ -1,0 +1,11 @@
+topic_name: "Requirements Definition"
+description: >
+  Provide a structured approach to define clear, actionable, and testable requirements for any project or initiative.
+style_prompt: |
+  This topic outlines the requirements:
+  - Clearly define the overall goal and scope of the project or initiative.
+  - Identify all functional requirements that describe what the system or process must accomplish.
+  - Specify non-functional requirements such as performance, security, usability, and scalability.
+  - Document constraints, assumptions, and dependencies that may impact the solution.
+  - Ensure all requirements are measurable, testable, and prioritized according to business value.
+labels: [requirements, documentation, planning, specification, analysis]

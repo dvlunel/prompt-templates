@@ -14,7 +14,8 @@ from .template_manager import TemplateManager
 from .clipboard import ClipboardManager
 from .renderer import Renderer
 
-
+# banner import
+from .banner import banner
 
 def clear_screen():
     """Clear the terminal screen."""
@@ -36,6 +37,8 @@ class InteractiveMenu:
         """Main loop for the interactive menu."""
         while True:
             clear_screen()
+            banner()
+
             main_choice = inquirer.select(
                 message="Main Menu - Choose an option:",
                 choices=[
@@ -57,6 +60,8 @@ class InteractiveMenu:
     def _handle_category_selection(self):
         """Menu flow for selecting a category and template."""
         clear_screen()
+        banner()
+
         category = inquirer.select(
             message="Select a category (or return):",
             choices=self.template_manager.list_categories() + ["Return to main menu"],
@@ -65,9 +70,12 @@ class InteractiveMenu:
             return
 
         clear_screen()
+        banner()
+
         template_choice = inquirer.select(
             message="Select a template (or return):",
-            choices=self.template_manager.list_templates_with_preview(category) + [{"name": "Return to main menu", "value": None}],
+            choices=self.template_manager.list_templates_with_preview(category)
+            + [{"name": "Return to main menu", "value": None}],
         ).execute()
         if template_choice is None:
             return
@@ -77,16 +85,23 @@ class InteractiveMenu:
     def _handle_search(self):
         """Menu flow for searching templates by keyword."""
         clear_screen()
+        banner()
+
         search_term = inquirer.text(message="Enter search term:").execute()
         matches = self.template_manager.search_templates(search_term)
         if not matches:
-            self.console.print(f"[bold red]No templates found for '{search_term}'.[/bold red]")
+            self.console.print(
+                f"[bold red]No templates found for '{search_term}'.[/bold red]"
+            )
             return
 
         clear_screen()
         template_choice = inquirer.select(
             message="Search results:",
-            choices=self.template_manager.list_templates_with_preview(file_paths=matches) + [{"name": "Return to main menu", "value": None}],
+            choices=self.template_manager.list_templates_with_preview(
+                file_paths=matches
+            )
+            + [{"name": "Return to main menu", "value": None}],
         ).execute()
         if template_choice is None:
             return
@@ -103,10 +118,18 @@ class InteractiveMenu:
         rendered_yaml = Renderer.render(raw_yaml, context)
 
         clear_screen()
+        banner()
+
         self.console.print("\n[bold yellow]Template Preview:[/bold yellow]")
-        self.console.print(f"[bold cyan]name:[/bold cyan] {data.get('prompt_name', '').strip()}")
-        self.console.print(f"[bold cyan]description:[/bold cyan] {data.get('description', '').strip()}")
-        self.console.print(f"[bold cyan]prompt_content:[/bold cyan] {rendered_prompt.strip()}")
+        self.console.print(
+            f"[bold cyan]name:[/bold cyan] {data.get('prompt_name', '').strip()}"
+        )
+        self.console.print(
+            f"[bold cyan]description:[/bold cyan] {data.get('description', '').strip()}"
+        )
+        self.console.print(
+            f"[bold cyan]prompt_content:[/bold cyan] {rendered_prompt.strip()}"
+        )
 
         for key, value in data.items():
             if key not in ["prompt_name", "description", "style_prompt"]:
@@ -114,9 +137,13 @@ class InteractiveMenu:
 
         if context:
             applied = ", ".join(f"{k}={v}" for k, v in context.items())
-            self.console.print(f"\n[bold magenta]Applied Variables:[/bold magenta] {applied}")
+            self.console.print(
+                f"\n[bold magenta]Applied Variables:[/bold magenta] {applied}"
+            )
 
-        if inquirer.confirm(message="Copy full YAML to clipboard?", default=True).execute():
+        if inquirer.confirm(
+            message="Copy full YAML to clipboard?", default=True
+        ).execute():
             self.clipboard.copy(rendered_yaml, "Copied full YAML to clipboard!")
             # Pause to allow user to see the message
             time.sleep(1.5)
@@ -132,7 +159,7 @@ class InteractiveMenu:
             sys.exit(0)
         # If "Return to the main menu", just return to loop
         return
-        
+
     def _collect_context(self) -> Dict[str, str]:
         """Collect context variables from CLI args only (no interactive prompts)."""
         context = {}

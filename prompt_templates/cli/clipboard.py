@@ -18,9 +18,6 @@ class ClipboardManager:
         """
         Copy the given content to the clipboard, wrapped in a template, and print a confirmation message.
         """
-        wrapped_content = (
-            "Use this prompt template as instructions:\n\n"
-            f"{content}"
-        )
+        wrapped_content = "Use this prompt template as instructions:\n\n" f"{content}"
         pyperclip.copy(wrapped_content)
         self.console.print(f"[bold green]{message}[/bold green]")

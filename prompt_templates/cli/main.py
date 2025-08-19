@@ -26,5 +26,6 @@ def main():
     else:
         console.print("[bold red]Non-interactive mode not implemented yet.[/bold red]")
 
+
 if __name__ == "__main__":
     main()
