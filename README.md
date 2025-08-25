@@ -5,8 +5,6 @@
 This repository provides a collection of ready-to-use prompt templates, written in a simplified YAML format.
 It also includes a command-line interface (CLI) tool that allows you to preview, view, and search through available templates.
 
---> Still under construction
-
 ## Features
 - Modular template structure by domain and use case
 - Easily extendable with new templates
